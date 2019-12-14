@@ -18,18 +18,18 @@
   
   
   <title>elementUI 级联选择器 | 犀牛</title>
-  <meta name="description" content="使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误  解决方案  将 elementUI 回退到 2.10.x 版本 或者 在清空级联选择器 :options 绑定数据前使用这句话  1this.$refs.cascader.panel.activePath = [];  问题测试  写一个最简单的的demo,注意加上 clearable 属性 树结构">
+  <meta name="description" content="使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误解决方案 将 elementUI 回退到 2.10.x 版本 或者 在清空级联选择器 :options 绑定数据前使用这句话  1this.$refs.cascader.panel.activePath = []; 问题测试 写一个最简单的的demo,注意加上 clearable 属性 树结构数据直接使用">
 <meta name="keywords" content="elementUI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="elementUI 级联选择器">
 <meta property="og:url" content="https://mjzy.github.io/2019/10/12/Web/element-ui/ElementUI_级联选择器/index.html">
 <meta property="og:site_name" content="犀牛">
-<meta property="og:description" content="使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误  解决方案  将 elementUI 回退到 2.10.x 版本 或者 在清空级联选择器 :options 绑定数据前使用这句话  1this.$refs.cascader.panel.activePath = [];  问题测试  写一个最简单的的demo,注意加上 clearable 属性 树结构">
+<meta property="og:description" content="使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误解决方案 将 elementUI 回退到 2.10.x 版本 或者 在清空级联选择器 :options 绑定数据前使用这句话  1this.$refs.cascader.panel.activePath = []; 问题测试 写一个最简单的的demo,注意加上 clearable 属性 树结构数据直接使用">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-11-28T09:08:32.857Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="elementUI 级联选择器">
-<meta name="twitter:description" content="使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误  解决方案  将 elementUI 回退到 2.10.x 版本 或者 在清空级联选择器 :options 绑定数据前使用这句话  1this.$refs.cascader.panel.activePath = [];  问题测试  写一个最简单的的demo,注意加上 clearable 属性 树结构">
+<meta name="twitter:description" content="使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误解决方案 将 elementUI 回退到 2.10.x 版本 或者 在清空级联选择器 :options 绑定数据前使用这句话  1this.$refs.cascader.panel.activePath = []; 问题测试 写一个最简单的的demo,注意加上 clearable 属性 树结构数据直接使用">
   <!-- Canonical links -->
   <link rel="canonical" href="https://mjzy.github.io/2019/10/12/Web/element-ui/ElementUI_级联选择器/index.html">
   
@@ -43,7 +43,6 @@
   
   
   
-  <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
 </head>
 
 
@@ -280,21 +279,17 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="使用elementui-210x-~-212x-版本的级联选择器会报-level-错误"><a class="markdownIt-Anchor" href="#使用elementui-210x-~-212x-版本的级联选择器会报-level-错误"></a> 使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误</h3>
-<h4 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案"></a> 解决方案</h4>
-<ul>
+        <h3 id="使用elementUI-2-10-x-2-12-x-版本的级联选择器会报-Level-错误"><a href="#使用elementUI-2-10-x-2-12-x-版本的级联选择器会报-Level-错误" class="headerlink" title="使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误"></a>使用elementUI 2.10.x ~ 2.12.x 版本的级联选择器会报 Level 错误</h3><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
 <li>将 <code>elementUI</code> 回退到 2.10.x 版本 <mark>或者</mark> 在清空级联选择器 <code>:options</code> 绑定数据前使用这句话</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$refs.cascader.panel.activePath = [];</span><br></pre></td></tr></table></figure>
-<h4 id="问题测试"><a class="markdownIt-Anchor" href="#问题测试"></a> 问题测试</h4>
-<ul>
+<h4 id="问题测试"><a href="#问题测试" class="headerlink" title="问题测试"></a>问题测试</h4><ul>
 <li>写一个最简单的的demo,注意加上 clearable 属性</li>
 <li>树结构数据直接使用官网提供的数据</li>
 <li>回到页面进行操作，先选中最后一级的某个数据，在点击清空按钮</li>
 <li>点开弹窗，会发现前几级仍然是高亮颜色，最后一级则是未选中时的颜色</li>
 </ul>
-<h4 id="问题原因"><a class="markdownIt-Anchor" href="#问题原因"></a> 问题原因</h4>
-<ul>
+<h4 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h4><ul>
 <li>在这几个版本中，选中后数据后，以官网提供的方式清除 <code>v-model</code> 绑定变量值，会出现只清空当前选中数据的选中，而且关联父级的数据选中则没有处理，因此，此时如果清空 <code>:options</code> 绑定数据，也就导致了level的错误。</li>
 </ul>
 
@@ -450,6 +445,23 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>
